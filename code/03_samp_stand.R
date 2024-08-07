@@ -53,7 +53,7 @@ genus_data <- subset(occ_data, select=c(genus, accepted_name, occurrence_no, col
 
 ## To compute Good's u for each interval, we need to know the frequencies of each taxon (genus):
 tax_freq <- lapply(1:nrow(intervals), function(i) {
-  tmp <- genus_data %>% filter(max_ma >= intervals[i,"max_ma"] & min_ma <= intervals[i,"min_ma"]) %>% 
+  tmp <- genus_data %>% dplyr::filter(max_ma >= intervals[i,"max_ma"] & min_ma <= intervals[i,"min_ma"]) %>% 
     count(., genus) %>% arrange(desc(n)) %>% # count no. genera in each interval
     select(n)
   freq_raw <- as.numeric(tmp$n)
@@ -225,7 +225,7 @@ estD_plotting <- bind_rows(estD_output) # binds rows of a list
 estD_plotting$quorum_level <- as.factor(estD_plotting$quorum_level)
 
 ## Create a colour gradient for as many colours as you have quorum levels:
-col_gradient <- scales::seq_gradient_pal("#B7E3B6", "#0A6B09", "Lab")(seq(0, 1, length.out = 5))
+col_gradient <- scales::seq_gradient_pal("#2F4760", "#BADA55", "Lab")(seq(0, 1, length.out = 5))
 
 ## Set your interval boundaries:
 int_boundaries <- c(237.0, 228.0, 208.5, 201.3, 199.3, 190.8, 182.7, 174.1)
