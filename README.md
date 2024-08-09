@@ -1,4 +1,4 @@
-# APW 2024 - Palaeodiversity in R
+# Palaeodiversity in R
 
 Emma Dunne (emma.dunne[at]fau.de)
 
@@ -11,7 +11,7 @@ Emma Dunne (emma.dunne[at]fau.de)
 
 ## Purpose
 
-This repository contains all materials, such as code and slideshows, for *Day 4: Exploring fossil occurrence data and fossil record biases* of the Analytical Paleobiology Workshop. There are three main parts to this class and each one has an associated exercise in R:
+This repository contains all materials for Module 2 of the Analytical Paleobiology Workshop. There are three main parts to this class and each one has an associated exercise in R:
 
 1. **Databases in Paleobiology** - available databases, futurproofing, accessing the Paleobiology Database and importing datasets into R
 2. **Fossil record data structure** - exploring the impact of heterogeneous data structures (biases) on estimates of diversity through visualisations and simple statistics
